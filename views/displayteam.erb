@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> <head> </head> <body>
+	
+<h3>Team Name: <%= @team.name %> </h3>
+<p>Team id: <%= @team.id.to_s %> </p>
+<p>Note: <%= @team.notes %></p>
+ 
+<p>Members: </p>
+<ul>
+<% @team.users.each do |u| %>
+<li> <%= u.name %>  </li>
+<% end%>
+</ul>	
+<br>
+
+
+<a href="/lookup">Back to Lookup Page</a> <br>
+<a href="/">Back to Admin Panel</a> <br>
+	
+</body>
+</html>
+

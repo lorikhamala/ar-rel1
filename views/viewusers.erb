@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> <head> </head> <body>
+	
+
+<h1> All Members </h1>
+
+<ul>
+	<% @users.each do |e| %>
+
+		<% @link = "/displayuser/#{e.id}" %>
+		<li>
+		<%= e.name %> <a href="<%= @link %>">  More Info  </a>		
+	</li>
+	<!--<li> <%= e.name + " | " + e.email + " | " + e.team.name %> </li>-->
+	<% end %>
+</ul>
+<br>
+
+<a href="/">Back to Admin Panel</a> <br>
+
+</body>
+</html>
